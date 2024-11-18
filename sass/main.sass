@@ -573,7 +573,7 @@ h3
         grid-auto-columns: 1fr
         grid-template-rows: auto
         gap: 1px
-        grid-template-columns: repeat(auto-fit, minmax(25%, auto))
+        grid-template-columns: repeat(auto-fit, minmax(20%, auto))
         position: relative
         overflow: hidden
     &__block-wrap
@@ -588,7 +588,21 @@ h3
         display: flex
         position: relative
         transform: translate(0)
-        background-color: transparent
+        &::before, &::after
+            content: ''
+            position: absolute
+            background-color: $line-color
+            z-index: 1
+        &::after
+            inline-size: 100vw
+            block-size: $line-thickness
+            inset-inline-start: 0
+            inset-block-start: calc( $line-offset * -1  )
+        &::before
+            inline-size: $line-thickness
+            block-size: 100vh
+            inset-block-start: 0
+            inset-inline-start: calc( $line-offset * -1  ) 
     &__block
         opacity: 1
         transition: opacity .4s
