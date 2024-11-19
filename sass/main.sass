@@ -133,6 +133,18 @@ h3
                 display: flex
                 align-items: flex-start
                 width: 26rem
+        &--works
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: space-between
+            gap: 1.5rem
+            background-color: #f5f5f7
+            padding: 2.5rem
+            &.is--2
+                flex: none
+                width: 43.125rem
+                min-height: 35.25rem
     &--home
         min-height: 35.25rem
         gap: 2rem
@@ -202,6 +214,36 @@ h3
     &--bg-yellow
         background-color: $yellow
         color: $blue-dark
+    &__bg
+        border-radius: 50%
+        width: 100%
+        height: 100%
+        transition: all .3s
+        position: absolute
+        inset: 0%
+        transform: scale(0)
+        &.bg-color-black
+            background-color: $blue-dark
+    &__icon
+        &-anim
+            z-index: 1
+            justify-content: center
+            align-items: center
+            font-size: 0
+            display: flex
+            position: relative
+            .icon-regular
+                z-index: 2
+                width: 1.5rem
+                height: 1.5rem
+                line-height: 0
+                position: relative
+                transition: transform .4s cubic-bezier(.215, .61,.355 ,1)
+                transform: translate(0%)
+                &.is-absolute
+                    position: absolute
+                    inset: 0%
+                    transform: translate(-180%)
 
 
 /* Header */
@@ -265,6 +307,14 @@ h3
     letter-spacing: -0.01em
     &--home
         position: relative
+.heading-5
+    line-height: 1.2
+    font-weight: 500
+    text-transform: none
+    letter-spacing: -.01em
+    font-size: 2.125rem
+.opacity-70
+    opacity: .7
 .home__bottom
     border-top: .0625rem solid #ffffff4d
     display: flex
@@ -630,13 +680,109 @@ h3
 /* Works */
 
 .swiper-works
-    flex-flow: rows
+    flex-flow: row
     align-items: stretch
     transition: all
 .slide-works
     flex: none
     width: 100%
     height: auto
+.works
+    &__info
+        display: flex
+        max-width: 25rem
+        flex: 1
+        flex-direction: column
+        gap: 1.5rem
+    &__logo
+        width: 8.5rem
+        height: 8.5rem
+        object-fit: cover
+        border-radius: 1.5rem
+        margin-bottom: .5rem
+        display: block
+    &-block
+        max-width: 100%
+        display: inline-block
+        text-decoration: none
+        color: #000
+    &__video-case
+        width: 100%
+        height: 100%
+        z-index: 1
+        object-fit: cover
+        display: block
+        position: relative
+        video
+            object-fit: cover
+            width: 100%
+            height: 100%
+            border-radius: 1.25rem
+    &__bottom
+        &--paginator
+            display: flex
+            margin-top: 2rem
+            gap: 3rem
+            justify-content: flex-start
+            align-items: center
+            .swiper-nav
+                display: flex
+                align-items: center
+                justify-content: center
+                gap: 1rem
+                &__arrow
+                    flex: none
+                    border-radius: 6.25rem
+                    border: .0625rem solid #fffc
+                    cursor: pointer
+                    pointer-events: auto
+                    justify-content: center
+                    align-items: center
+                    width: 3.5rem
+                    height: 3.5rem
+                    transition: all .4s
+                    display: flex
+                    position: relative
+                    overflow: hidden
+                    transform: translate(0)
+                    &.is-left
+                        transform: rotate(180deg)
+                    &.is-border-grey
+                        border-color: #02021e4d
+.post-card
+    &__param
+        display: flex
+        font-size: .875rem
+        line-height: 1.4
+        width: 100%
+        align-items: center
+        justify-content: flex-start
+        flex-flow: wrap
+        text-transform: uppercase
+        letter-spacing: .06em
+        & > div
+            width: auto
+    &__tag
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: .875rem
+        line-height: 1.2
+        text-transform: uppercase
+        letter-spacing: .5px
+        opacity: .7
+        padding-top: .1rem
+        color: $blue-dark
+    &__flags
+        margin-left: 1rem
+        padding-left: 1rem
+        border-left: 1px solid #fff6
+        border-color: rgba(2, 2, 30, .4)
+.project__flag
+        width: 1.5rem
+        margin-top: -.2rem
+        margin-bottom: -.2rem
+        display: block
 
 
 

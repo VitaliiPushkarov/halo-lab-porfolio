@@ -16,10 +16,10 @@ const toggleTexts = (texts, showFirst) => {
         texts[1].style.transform = showFirst ? 'translateY(150%)' : 'translateY(0)';
     }
 };
-
 document.querySelectorAll('[data-hover-elem]').forEach(elem => {
     const texts = elem.querySelectorAll('.button__text');
     const clientText = elem.querySelector('.clients__text-wrap');
+    
 
     elem.addEventListener('mouseenter', () => { 
         toggleTexts(texts, false);
@@ -43,7 +43,22 @@ document.querySelectorAll('[data-button-flex]').forEach(button => {
     button.addEventListener('mouseleave', () => { toggleIcons(leftIcon,rightIcon, true); toggleTexts(texts, true) });
 });
 
+document.querySelectorAll('[data-change-bg]').forEach(button => {
+    const buttonBg = button.querySelector('.bg-color-black');
+    const iconChangeWhite = button.querySelector('.is-absolute');
+    const iconChangeBlack = button.querySelector('.transform-black');
 
+    button.addEventListener('mouseenter',function(){
+        buttonBg.style.transform = 'scale(1)';
+        iconChangeWhite.style.transform = 'translate(0)';
+        iconChangeBlack.style.transform = 'translate(180%)';
+    });
+    button.addEventListener('mouseleave',function(){
+        buttonBg.style.transform = 'scale(0)';
+        iconChangeWhite.style.transform = 'translate(-180%)';
+        iconChangeBlack.style.transform = 'translate(0)';
+    });
+})
 document.addEventListener('DOMContentLoaded', function() {
     const imagesContainer = document.querySelector('[data-home-images]');
     const wordsContainer = document.querySelector('[data-h1-words]');
