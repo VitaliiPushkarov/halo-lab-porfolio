@@ -17,18 +17,20 @@ const toggleTexts = (texts, showFirst) => {
     }
 };
 
-
-
-document.querySelectorAll('.clients__block-wrap').forEach(text => {
-    const clientText = text.querySelectorAll('.clients__text-wrap');
-    text.addEventListener('mouseenter', () => {  });
-});
-
 document.querySelectorAll('[data-hover-elem]').forEach(elem => {
     const texts = elem.querySelectorAll('.button__text');
+    const clientText = elem.querySelector('.clients__text-wrap');
 
-    elem.addEventListener('mouseenter', () => { toggleTexts(texts, false) });
-    elem.addEventListener('mouseleave', () => { toggleTexts(texts, true) });
+    elem.addEventListener('mouseenter', () => { 
+        toggleTexts(texts, false);
+
+        clientText.classList.add('active');
+    });
+    elem.addEventListener('mouseleave', () => { 
+        toggleTexts(texts, true);
+
+        clientText.classList.remove('active');
+    });
 });
 
 document.querySelectorAll('[data-button-flex]').forEach(button => {

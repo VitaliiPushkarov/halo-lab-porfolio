@@ -23,7 +23,7 @@ $line-color: $white
 
 
 html      
-  scroll-behavior: smooth
+  background-attachment: scroll !important
 
 
 body 
@@ -141,6 +141,12 @@ h3
         align-items: flex-end
         margin-bottom: 3.5rem
         position: relative
+    &--works
+        border-radius: 1.25rem
+        height: 100%
+        min-height: 32rem
+        overflow: hidden
+
 
 .button
     display: flex
@@ -621,5 +627,18 @@ h3
             transform: translate(0)
             &.active
                 height: 8rem
+/* Works */
+
+.swiper-works
+    flex-flow: rows
+    align-items: stretch
+    transition: all
+.slide-works
+    flex: none
+    width: 100%
+    height: auto
+
+
+
 
 
