@@ -113,7 +113,7 @@ h3
         margin-bottom: 1.5rem
     &__block
         &.is-form
-        width: 27.25rem
+            width: 27.25rem
         &.is-contacts
             width: 16rem
             justify-self: start
@@ -926,8 +926,134 @@ h3
             letter-spacing: .0125rem
             justify-content: flex-start
             align-items: center
-            font-size: 1.25rem
+            font-size: 1.55rem
             font-weight: 500
             line-height: 1.4
             display: flex
             max-width: 100%
+            text-decoration: none
+            color: $white
+    &-contact
+        grid-row-gap: 2rem
+        flex-direction: column
+        justify-content: flex-start
+        display: flex
+        &-links
+            grid-row-gap: .75rem
+            flex-direction: column
+            align-items: flex-start
+            display: flex
+    &__contact
+        &-link
+            grid-column-gap: .75rem
+            color: $white
+            letter-spacing: .0125rem
+            align-items: center
+            font-weight: 500
+            line-height: 1.4
+            display: inline-block
+            position: relative
+            max-width: 100%
+            text-decoration: none
+            font-size: 1.55rem
+
+@media  screen and (max-width: 991px)
+    .section
+        padding: 3.5rem 2rem
+        &--hero
+            padding-top: 13.5rem
+    .header__nav
+        display: none
+    .heading-1--home
+        margin-right: -1rem
+        font-size: 3.75rem
+    .home__container
+        background-image: url(/img/home-container-1024.webp)
+        padding: 2.5rem 1.5rem 1.5rem
+    .home__bottom
+        padding-top: 1.75rem
+    .home__bottom--item-left
+        gap: .5rem
+    .icon-scale
+        width: 2.5rem
+        height: 2.5rem
+    .button--small-simple
+        padding-left: 1.25rem
+        padding-right: 1.25rem
+    .home__bottom--item-number
+        font-size: 2.375rem
+    .home__bottom--item-text
+        font-size: .875rem
+    .home__slider
+        width: 14rem
+        border-radius: .875rem
+    .home__images
+        width: 9rem
+        height: 9rem
+        top: 3.8rem
+        right: 1.5rem
+    .home__image
+        transform: translateY(4.8rem) scale(0)
+        &.active
+            &.done
+                transform: translateY(-4.8rem) scale(0)
+    .columns
+        &--home
+            gap: 1rem
+            min-height: 22.6rem
+        &.is-heading
+            gap: 1rem
+            margin-bottom: 4.5rem
+    .columns__col--heading-is-1
+        width: 14rem
+    .space-heading-4
+        width: 7.125rem
+        height: 2rem
+    .heading-4
+        font-size: 1.875rem
+    .heading-1
+        font-size: 3.75rem
+    .services__video-wrap .services__video
+        width: 4.5rem
+        height: 4.5rem
+    .services__video-wrap .button-play
+        width: 4.5rem
+        height: 4.5rem
+    .services__video-wrap .button-play .button-play__icon
+        width: 1rem
+        height: 1rem
+    .columns--card-head
+        gap: 3.5rem
+        margin-bottom: 2.5rem
+    .card__container
+        background-image: url(/img/services-container-1024.avif)
+        border-bottom-left-radius: 1.5rem
+        border-bottom-right-radius: 1.5rem
+        padding: 1.5rem
+    .services__list
+        flex-direction: column
+        margin-bottom: -.5rem
+    .services__list .services__item
+        width: 100%
+        padding-bottom: .5rem
+    .services__list .services__item .services__block
+        gap: 1rem
+        border-radius: 1rem
+        justify-content: space-between
+        align-items: center
+        padding: 1.5rem
+    .services__list .services__item .services__block .services__icon-wrap .icon-service
+        width: 2.5rem
+    .services__list .services__item .services__block .services__icon-wrap .button-service
+        display: none !important
+    .services__list .services__item .services__block .services__text-wrap
+        padding-top: 0
+    .services__list .services__item .services__block .services__text-wrap .services__title
+        flex: 1
+        margin-bottom:  0
+        font-size: 1.125rem
+    .services__list .services__item .services__block .services__text-wrap .services__text
+        display: none
+    .portrait__founder--avatar
+        width: 6rem
+        height: 6rem
